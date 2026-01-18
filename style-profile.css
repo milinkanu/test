@@ -1,0 +1,259 @@
+/* Inheriting variables/fonts from style2.css logic, 
+   but defining specific profile overrides here */
+
+.profile-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 80px auto 40px;
+    /* added top margin for navbar */
+    padding: 0 20px;
+}
+
+@media (min-width: 768px) {
+    .profile-container {
+        grid-template-columns: 1fr 1.5fr;
+    }
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    background: rgba(10, 10, 10, 0.5);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #fff;
+    letter-spacing: -1px;
+}
+
+.logout-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 50, 50, 0.3);
+    color: #ff4d4d;
+    padding: 0.5rem 1rem;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.logout-btn:hover {
+    background: rgba(255, 50, 50, 0.1);
+    border-color: #ff4d4d;
+    box-shadow: 0 0 10px rgba(255, 50, 50, 0.2);
+}
+
+/* Profile Card */
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.avatar-container {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    border: 2px solid rgba(255, 215, 0, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffd700;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.1);
+}
+
+.online-status {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    background: #10b981;
+    border: 3px solid #000;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #10b981;
+}
+
+.identity-info h2 {
+    font-size: 1.8rem;
+    margin: 0 0 0.5rem 0;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.badge-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.role-badge {
+    background: rgba(255, 215, 0, 0.1);
+    color: #ffd700;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    font-family: 'Space Mono', monospace;
+    text-transform: uppercase;
+}
+
+.id-badge {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: 'Space Mono', monospace;
+    font-size: 0.8rem;
+    padding: 0.3rem 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-label {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 5px;
+    font-family: 'Space Mono', monospace;
+}
+
+.stat-value {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.stat-value.active {
+    color: #10b981;
+    text-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+}
+
+/* Details Card */
+.section-title {
+    font-family: 'Space Mono', monospace;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.detail-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.detail-row:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.detail-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    color: #ffd700;
+    font-size: 1.2rem;
+}
+
+.detail-content label {
+    display: block;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 4px;
+}
+
+.detail-value {
+    color: #fff;
+    font-size: 1rem;
+    word-break: break-all;
+}
+
+.detail-link {
+    color: #ffd700;
+    text-decoration: none;
+    border-bottom: 1px dotted rgba(255, 215, 0, 0.5);
+    transition: all 0.3s;
+}
+
+.detail-link:hover {
+    border-bottom-style: solid;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    margin: 2rem 0;
+}
+
+.tech-stack-display {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tech-badge-display {
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    color: #fff;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.tech-badge-display:hover {
+    background: rgba(255, 215, 0, 0.1);
+    border-color: rgba(255, 215, 0, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.tech-badge-display.empty {
+    border-style: dashed;
+    color: rgba(255, 255, 255, 0.3);
+}

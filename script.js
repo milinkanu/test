@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
 
         const originalText = submitBtn.querySelector('span').innerText;
+        const emailInput = document.getElementById('email').value;
 
         // Loading state
         submitBtn.querySelector('span').innerText = 'Signing In...';
@@ -31,9 +32,26 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.querySelector('span').innerText = 'Success!';
             submitBtn.style.backgroundColor = '#10b981'; // Green color for success
 
-            // Here you would typically handle the actual login logic
-            // alert('Login Successful! (This is a demo)');
-            window.location.href = 'verify.html';
+            // Create mock data for login flow if none exists
+            // Ideally backend would provide this
+            const mockData = {
+                fullname: 'Returning Agent',
+                email: emailInput, // Use the entered email
+                phone: '+1 555 0199',
+                role: 'fullstack',
+                github: 'https://github.com/banado-agent',
+                stack: ['JS', 'React', 'Node'],
+                id: 'AGENT-007'
+            };
+
+            // Only overwrite if we don't have better data or if we want to simulate fresh login
+            // For this demo, let's ensure we have something to show. 
+            // If the user just registered, we probably entered via index2.html, not index.html
+            if (!localStorage.getItem('banado_agent_data')) {
+                localStorage.setItem('banado_agent_data', JSON.stringify(mockData));
+            }
+
+            window.location.href = 'profile.html';
         }, 1500);
     });
 
