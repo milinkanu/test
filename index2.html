@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banado Boss | Technical Event Registration</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="background-effects">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <main class="main-container">
+        <div class="card glass-panel">
+            <header class="form-header">
+                <h2 class="sub-title">// technical_event_2026</h2>
+                <h1 class="main-title">BANADO <span class="highlight">BOSS</span></h1>
+                <p class="description">Secure your spot in the ultimate coding showdown. Only the bosses survive.</p>
+            </header>
+
+            <form id="registrationForm" class="registration-form">
+                <div class="form-group slide-in" style="--delay: 100ms">
+                    <label for="fullname">Operative Name</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="John Doe" required autocomplete="off">
+                    <span class="focus-border"></span>
+                </div>
+
+                <div class="form-group slide-in" style="--delay: 200ms">
+                    <label for="email">Comms Channel (Email)</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required autocomplete="off">
+                    <span class="focus-border"></span>
+                </div>
+
+                <div class="form-row slide-in" style="--delay: 300ms">
+                    <div class="form-group">
+                        <label for="phone">Frequency (Phone)</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+1 234 567 890" required>
+                        <span class="focus-border"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="role">Role</label>
+                        <select id="role" name="role" required>
+                            <option value="" disabled selected>Select Class...</option>
+                            <option value="frontend">Frontend Ninja</option>
+                            <option value="backend">Backend Architect</option>
+                            <option value="fullstack">Fullstack Overlord</option>
+                            <option value="ai-ml">AI/ML Visionary</option>
+                            <option value="cybersec">CyberSec Phantom</option>
+                        </select>
+                        <span class="focus-border"></span>
+                    </div>
+                </div>
+
+                <div class="form-group slide-in" style="--delay: 400ms">
+                    <label for="github">Codebase Origin (GitHub/Portfolio)</label>
+                    <input type="url" id="github" name="github" placeholder="https://github.com/..." required>
+                    <span class="focus-border"></span>
+                </div>
+
+                <div class="form-group slide-in" style="--delay: 500ms">
+                    <label>Weapon of Choice (Stack)</label>
+                    <div class="tech-stack-selector">
+                        <label class="tech-checkbox-label">
+                            <input type="checkbox" name="stack" value="JS">
+                            <span class="tech-badge">JS</span>
+                        </label>
+                        <label class="tech-checkbox-label">
+                            <input type="checkbox" name="stack" value="TS">
+                            <span class="tech-badge">TS</span>
+                        </label>
+                        <label class="tech-checkbox-label">
+                            <input type="checkbox" name="stack" value="Python">
+                            <span class="tech-badge">PY</span>
+                        </label>
+                        <label class="tech-checkbox-label">
+                            <input type="checkbox" name="stack" value="Rust">
+                            <span class="tech-badge">RS</span>
+                        </label>
+                        <label class="tech-checkbox-label">
+                            <input type="checkbox" name="stack" value="Go">
+                            <span class="tech-badge">GO</span>
+                        </label>
+                         <label class="tech-checkbox-label">
+                            <input type="checkbox" name="stack" value="C++">
+                            <span class="tech-badge">C++</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-actions slide-in" style="--delay: 600ms">
+                    <button type="submit" class="cta-button">
+                        <span class="btn-text">INITIATE SEQUENCE</span>
+                        <div class="btn-glitch"></div>
+                    </button>
+                </div>
+            </form>
+
+            <div id="successMessage" class="success-message hidden">
+                <div class="success-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                </div>
+                <h3>ACCESS GRANTED</h3>
+                <p>Welcome to the protocol, Agent <span id="userNameDisplay"></span>.</p>
+                <p class="small">Check your comms for the briefing.</p>
+                <button id="resetBtn" class="secondary-button">Register Another Operative</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script2.js"></script>
+</body>
+</html>
