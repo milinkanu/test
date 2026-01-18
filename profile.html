@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Profile | Banado Boss</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style-profile.css">
+</head>
+
+<body>
+    <div class="background-effects">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="logo">BANADO <span class="highlight">BOSS</span></div>
+        <button id="logoutBtn" class="logout-btn">
+            <i class="fa-solid fa-power-off"></i> ABORT SESSION
+        </button>
+    </nav>
+
+    <main class="main-container profile-container">
+        <!-- Identity Card Section -->
+        <div class="card glass-panel profile-card slide-in" style="--delay: 100ms">
+            <div class="profile-header">
+                <div class="avatar-container">
+                    <div class="avatar" id="avatar">
+                        <span id="avatarInitials">OP</span>
+                    </div>
+                    <div class="online-status"></div>
+                </div>
+                <div class="identity-info">
+                    <h2 id="profileName" class="glitch-text">OPERATIVE NAME</h2>
+                    <div class="badge-container">
+                        <span id="profileRole" class="role-badge">UNKNOWN CLASS</span>
+                        <span class="id-badge">ID: <span id="agentId">8473-X</span></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-label">STATUS</div>
+                    <div class="stat-value active">ACTIVE</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">CLEARANCE</div>
+                    <div class="stat-value">LEVEL 5</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">MISSIONS</div>
+                    <div class="stat-value">0</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Data Dossier Section -->
+        <div class="card glass-panel details-card slide-in" style="--delay: 300ms">
+            <h3 class="section-title">// COMMS_DATA</h3>
+
+            <div class="detail-row">
+                <div class="detail-icon"><i class="fa-regular fa-envelope"></i></div>
+                <div class="detail-content">
+                    <label>Frequency (Email)</label>
+                    <div id="profileEmail" class="detail-value">---</div>
+                </div>
+            </div>
+
+            <div class="detail-row">
+                <div class="detail-icon"><i class="fa-solid fa-phone"></i></div>
+                <div class="detail-content">
+                    <label>Secure Line (Phone)</label>
+                    <div id="profilePhone" class="detail-value">---</div>
+                </div>
+            </div>
+
+            <div class="detail-row">
+                <div class="detail-icon"><i class="fa-brands fa-github"></i></div>
+                <div class="detail-content">
+                    <label>Code Origin</label>
+                    <a id="profileGithub" href="#" target="_blank" class="detail-link">---</a>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <h3 class="section-title">// TECH_ARSENAL</h3>
+            <div id="techStackContainer" class="tech-stack-display">
+                <!-- Badges will be injected here -->
+                <span class="tech-badge-display empty">No tech detected</span>
+            </div>
+        </div>
+    </main>
+
+    <script src="script-profile.js"></script>
+</body>
+
+</html>
