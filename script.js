@@ -32,16 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
             submitBtn.style.backgroundColor = '#10b981'; // Green color for success
 
             // Here you would typically handle the actual login logic
-            alert('Login Successful! (This is a demo)');
-
-            // Reset button after delay
-            setTimeout(() => {
-                submitBtn.querySelector('span').innerText = originalText;
-                submitBtn.style.opacity = '1';
-                submitBtn.style.cursor = 'pointer';
-                submitBtn.style.backgroundColor = ''; // Reset color
-                loginForm.reset();
-            }, 2000);
+            // alert('Login Successful! (This is a demo)');
+            window.location.href = 'verify.html';
         }, 1500);
     });
 
@@ -139,6 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     verifyBtn.querySelector('span').innerText = 'Verified!';
                     verifyBtn.style.backgroundColor = '#10b981';
                     alert(`Code ${code} verified successfully!`);
+                    window.location.href = 'index.html';
 
                     setTimeout(() => {
                         verifyBtn.querySelector('span').innerText = originalText;
