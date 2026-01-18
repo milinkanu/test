@@ -67,8 +67,13 @@ body {
 }
 
 @keyframes float {
-    0% { transform: translate(0, 0) scale(1); }
-    100% { transform: translate(50px, 50px) scale(1.1); }
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(50px, 50px) scale(1.1);
+    }
 }
 
 /* Glassmorphism Card */
@@ -150,7 +155,7 @@ body {
     box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2);
 }
 
-.input-wrapper input:focus + .icon {
+.input-wrapper input:focus+.icon {
     color: var(--primary-color);
 }
 
@@ -275,4 +280,94 @@ body {
     .login-container {
         padding: 2rem;
     }
+}
+
+/* Verification Page Specifics */
+.verify-container {
+    max-width: 400px;
+}
+
+.icon-header {
+    width: 60px;
+    height: 60px;
+    background: rgba(99, 102, 241, 0.2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1.5rem auto;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+}
+
+.otp-inputs {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.otp-field {
+    width: 50px;
+    height: 60px;
+    border-radius: 12px;
+    background: var(--input-bg);
+    border: 1px solid var(--input-border);
+    color: var(--text-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.otp-field:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2);
+    transform: translateY(-5px);
+}
+
+.resend-text {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.resend-link {
+    display: block;
+    text-align: center;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.resend-link.disabled {
+    color: var(--text-muted);
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.resend-link:not(.disabled):hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+}
+
+.back-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.back-link:hover {
+    color: var(--text-color);
 }
